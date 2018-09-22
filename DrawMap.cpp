@@ -155,13 +155,14 @@ public:
         return currentColm;
     }
     
+    
     int getCurrentValueOfIndex(){
         currentValue = map[indexOfMinColm][currentColm];
         return currentValue;
     }
     
     
-    int calcNextPath(){
+    int calcNextPath(){//calculates next path
         
         int x1, x2, x3 = 0;
         int e1, e2, e3 = 0;
@@ -174,9 +175,11 @@ public:
             return 0;
         }
         
-        x1 = map[currentColm + 1][indexOfMinColm + 1];
-        x2 = map[currentColm + 1][indexOfMinColm];
-        x3 = map[currentColm + 1][indexOfMinColm - 1];
+        x1 = map[indexOfMinColm + 1][currentColm + 1];
+        x2 = map[indexOfMinColm][currentColm + 1];
+        x3 = map[indexOfMinColm - 1][currentColm + 1];
+        
+        
         
         //get elevation
         e1 = abs(currentValue - x1);
