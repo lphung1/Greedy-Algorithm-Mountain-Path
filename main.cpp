@@ -44,6 +44,7 @@ int main() {
             cg -> set(i, j, Color(color, color, color, 255));
         }
     }
+    
     //draw line from lowest elevation
     for(int i = 0; i < map.getCol(); i++){
         map.calcNextPath();
@@ -76,7 +77,7 @@ int main() {
             map.calcNextPath();
             cg -> set(map.getIndexOfMinCol(), map.getCurrentCol(), Color("red"));
         }
-        Bridges::visualize();
+        //Bridges::visualize(); //comment out to see multiple images
     }
      */
     

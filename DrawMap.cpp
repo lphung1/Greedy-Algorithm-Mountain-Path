@@ -161,12 +161,18 @@ public:
     }
     
     
-    void calcNextPath(){
+    int calcNextPath(){
         
         int x1, x2, x3 = 0;
         int e1, e2, e3 = 0;
         int random = 0;
         //(rand() % 10) + 1
+        
+        //if line is out of bounds, end function
+        if(currentColm + 1 > col){
+            cout << "Line out of bounds";
+            return 0;
+        }
         
         x1 = map[currentColm + 1][indexOfMinColm + 1];
         x2 = map[currentColm + 1][indexOfMinColm];
@@ -216,7 +222,7 @@ public:
         }
         
         
-        
+        return 0;
     }//end calc next path
     
     int drawNextPath(){
